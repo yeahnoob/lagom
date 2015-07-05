@@ -13,6 +13,7 @@ social:
   #twitter: _swanson
   #facebook: zuck
   #tumblr: animalygifs
+  weibo: rockrollfree
   #linkedin: philipjagielski
   #gplus: 110552447039675960964
   gravatar: fca4fa93dff5b391109a1d28523ef775
@@ -23,7 +24,7 @@ email: yeahnoob@buaa.edu.cn
 tagline: "weak opinions, strongly held"
 
 # Google Analytics key, leave blank to ignore
-google_analytics_key: UA-xxxx-x
+google_analytics_key: 
 
 # Toggle "Postings are my own" disclaimer in footer
 show_disclaimer: true
