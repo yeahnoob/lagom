@@ -25,15 +25,14 @@ categories:
 
 ## 解决方法
 
-`/etc/init/rc-sysinit.conf` 中修改对应字段为
 
-```
+`/etc/init/rc-sysinit.conf` 中修改对应字段为
+{% highlight Bash %}
 env DEFAULT_RUNLEVEL=3
-```
+{% endhighlight %}
 
 `/etc/init/mdm.conf` 中修改对应字段为
-
-```
+{% highlight Bash %}
 #start on ((filesystem
 #           and runlevel [!06]
 #           and started dbus
@@ -49,7 +48,7 @@ start on ((filesystem
           or runlevel PREVLEVEL=S)
 
 stop on runlevel [0136]
-```
+{% endhighlight %}
 
 这样修改以后重启就能正常进入多用户命令行模式。
 
