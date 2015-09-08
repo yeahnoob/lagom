@@ -18,20 +18,20 @@ categories:
 ## 问题分析
 对比实际系统中的运行的模块，同时参考网上找到的一些很笼统的信息，结合起来可以总结如下：
 
-  -- Debian 系列的很多 Linux 发行版本，并没有使用默认的 Linux 启动级别(Runlevel)设置。
-  -- 通过一些方式改变 Runlevel 后，系统也不会自动退出图形界面。
-  -- Linux Mint 17.1 使用单独的 mdm (MDM Display Manager) 模块，管理图形界面的启动。
-  -- 当前 Ubuntu 比如 14.04 版本的中，也使用单独的 lightdm (Lightweight Display Manager) 模块来管理图形界面启动。
+- Debian 系列的很多 Linux 发行版本，并没有使用默认的 Linux 启动级别(Runlevel)设置。
+- 通过一些方式改变 Runlevel 后，系统也不会自动退出图形界面。
+- Linux Mint 17.1 使用单独的 mdm (MDM Display Manager) 模块，管理图形界面的启动。
+- 当前 Ubuntu 比如 14.04 版本的中，也使用单独的 lightdm (Lightweight Display Manager) 模块来管理图形界面启动。
 
 ## 解决方法
 
 
-`/etc/init/rc-sysinit.conf` 中修改对应字段为
+- `/etc/init/rc-sysinit.conf` 中修改对应字段为
 {% highlight Bash %}
 env DEFAULT_RUNLEVEL=3
 {% endhighlight %}
 
-`/etc/init/mdm.conf` 中修改对应字段为
+-  `/etc/init/mdm.conf` 中修改对应字段为
 {% highlight Bash %}
 #start on ((filesystem
 #           and runlevel [!06]
